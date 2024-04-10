@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container px-4">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h2>
+                {% if priority_type.code=="high" %}
+                    <h2>Critical notification content</h2>
+                {% elif priority_type.code=="medium" %}
+                    <h2>Important notification content</h2>
+                {% else %}
+                    <h2>Notification content</h2>
+                {% endif %}
+            </h2>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-1"><label for="room_number" class="form-label">Room number</label></div>
+        <div class="col-2"><input type="text" name="room_number" id="room_number" class="form-control" value="{{ room_number }}" readonly></div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-1"><label for="surname" class="form-label">Surname</label></div>
+        <div class="col-2"><input type="text" name="surname" id="surname" class="form-control" value="{{ surname }}" readonly></div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-1"><label for="room_notification" class="form-label">Notification</label></div>
+        <div class="col-2"><input type="text" name="room_notification" id="room_notification" class="form-control" value="{{ room_notification }}" readonly></div>
+        <div class="col-1"></div>
+    </div>
+</div>
+{% endblock %}
+

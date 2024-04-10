@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          History with Tradition
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Welcome to Hotel Akordion, a place with a deeply rooted history and tradition. Our hotel was established in the heart of the city, opening its doors for the first time in 1920. Since then, we have undergone many transformations while preserving the original charm and elegance. Every corner of this place bears witness to bygone years, and our guests can feel the magic of the past combined with modern comfort. We look forward to having you join our history and immerse yourself in an atmosphere that will transport you through time.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Modern Elegance
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Hotel Akordion is where history meets modernity, creating a unique harmony. Our spacious and stylish rooms are designed with comfort and luxury in mind, blending tradition with innovation. Every element has been carefully chosen to create a pleasant experience for our guests. Whether you're traveling for business or leisure, Hotel Akordion offers exceptional amenities that will meet your expectations.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Oasis of Relaxation and Inspiration
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Immerse yourself in an atmosphere of tranquility and inspiration at Hotel Akordion. Our simply inspired interiors will create an oasis of relaxation for you, where time moves slower, and every detail matters. Our hotel not only provides comfortable rooms but also spaces for meetings and relaxation. Go beyond the boundaries of everyday life and explore culture and art in our unique environment. It's not just a hotel - it's an experience that will stay with you forever.
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

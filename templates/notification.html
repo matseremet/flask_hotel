@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-5 h1">Add notification</div>
+    </div>
+    <form id="notification_form" action="{{ url_for('notification') }}" method="POST">
+        <div class="form">
+            <div class="col-2 col-form-label"><label for="room_number">Room number:</label></div>
+            <div class="col-3">
+                <input type="text" id="room_number" name="room_number" class="form-control"><br>
+            </div>
+        </div>
+        <div class="form">
+            <div class="col-2 col-form-label"><label for="surname">Your surname:</label></div>
+            <div class="col-3">
+                <input type="text" id="surname" name="surname" class="form-control"><br>
+            </div>
+        </div>
+        <div class="form">
+            <div class="col-2 col-form-label"><label for="room_notification">Notification:</label></div>
+            <div class="col-3">
+                <input type="text" id="room_notification" name="room_notification" class="form-control"><br>
+            </div>
+        </div>
+        <div class="form">
+            <div class="col-2 col-form-label"><label for="priority">Priority:</label></div>
+            <div class="col-3">
+                <select id="priority" name="priority" class="form-select">
+                    {% for priority in priorities.list_of_priorities %}
+                        <option value="{{ priority.code }}" {{ 'selected' if priority.selected}}>{{priority.description}}</option>
+                    {% endfor %}
+                </select><br>
+            </div>
+        </div>
+        <div class="form">
+            <div class="col-1"></div>
+            <div class="col-2"><input type="submit" value="Send" class="btn btn-primary"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+<!-- <form>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3">
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            First radio
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Second radio
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="form-check-label" for="gridRadios3">
+            Third disabled radio
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Example checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form> -->
+
+
+
